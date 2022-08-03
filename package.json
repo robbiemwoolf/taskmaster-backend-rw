@@ -1,17 +1,22 @@
 {
-  "name": "backend",
+  "name": "taskmaster-backend-rw",
   "version": "1.0.0",
   "engines": {
     "node": "12.13.0"
   },
-  "description": "taskmaster",
+  "description": "custom todo app",
   "main": "src/server.js",
   "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch",
+    "client": "npm start --prefix client",
+    "knex": "knex",
+    "migrate": "knex migrate:latest",
+    "reset": "npm run rollback && npm run migrate && npm run seed",
+    "rollback": "knex migrate:rollback",
+    "seed": "knex seed:run",
     "start": "node src/server.js",
-    "start:dev": "nodemon src/server.js",
-    "client": "npm start --prefix client"
+    "server": "nodemon src/server.js",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "keywords": [],
   "author": "Robbie Woolf",
@@ -21,10 +26,13 @@
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "knex": "^2.2.0",
+    "morgan": "^1.10.0",
     "pg": "^8.4.2",
-    "morgan": "^1.10.0"
+    "sqlite3": "^5.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.6",
+    "supertest": "^6.2.4"
   }
 }
