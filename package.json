@@ -1,9 +1,6 @@
 {
   "name": "taskmaster-backend-rw",
   "version": "1.0.0",
-  "engines": {
-    "node": "12.13.0"
-  },
   "description": "custom todo app",
   "main": "src/server.js",
   "scripts": {
