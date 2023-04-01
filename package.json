@@ -4,7 +4,6 @@
   "description": "custom todo app",
   "main": "src/server.js",
   "scripts": {
-    "build": "node src/server.js",
     "client": "npm start --prefix client",
     "knex": "knex",
     "migrate": "knex migrate:latest",
