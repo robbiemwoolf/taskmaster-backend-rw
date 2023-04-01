@@ -2,7 +2,7 @@
   "name": "taskmaster-backend-rw",
   "version": "1.0.0",
   "description": "custom todo app",
-  "main": "src/server.js",
+  "main": "./src/server.js",
   "scripts": {
     "client": "npm start --prefix client",
     "knex": "knex",
@@ -10,8 +10,8 @@
     "reset": "npm run rollback && npm run migrate && npm run seed",
     "rollback": "knex migrate:rollback",
     "seed": "knex seed:run",
-    "start": "node src/server.js",
-    "server": "nodemon src/server.js",
+    "start": "node ./src/server.js",
+    "server": "nodemon ./src/server.js",
     "test": "jest",
     "test:watch": "jest --watch"
   },
